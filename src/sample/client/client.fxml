@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="728.0" prefWidth="1366.0" stylesheets="@add/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.client.ClientController">
+   <children>
+      <HBox layoutX="11.0" layoutY="187.0" style="-fx-border-color: #c3c3c3; -fx-border-radius: 5;">
+         <children>
+            <JFXComboBox fx:id="combo_klient" editable="true" prefHeight="38.0" prefWidth="279.0" promptText="Выбрать клиента..." unFocusColor="#c3c3c3" />
+            <JFXButton contentDisplay="CENTER" prefHeight="39.0" prefWidth="58.0" style="-fx-border-color: #c3c3c3; -fx-border-width: 0 0 0 2;" text=" " HBox.hgrow="ALWAYS">
+               <graphic>
+                  <FontAwesomeIconView fill="#909090" glyphName="SEARCH" size="22" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXButton buttonType="RAISED" layoutX="1238.0" layoutY="675.0" onAction="#handle_back" prefHeight="42.0" prefWidth="116.0" style="-fx-background-color: #293a4c;" text="Назад" textFill="WHITE" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="12.0">
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="1201.0" layoutY="14.0" onAction="#handle_addKlient" prefHeight="51.0" prefWidth="151.0" style="-fx-background-color: #293a4c;" text="Добавить" textFill="#f8f8f8">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="161.0" layoutY="125.0" onAction="#handle_excel" prefHeight="41.0" prefWidth="128.0" style="-fx-background-color: #3f48cc; -fx-background-radius: 5;" text="Excel" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Montserrat Regular" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/excel1.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="125.0" onAction="#handle_tulov" prefHeight="41.0" prefWidth="139.0" style="-fx-background-color: #3f48cc; -fx-background-radius: 5;" text="Оплатить" textFill="#f8f8f8" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="125.0">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </JFXButton>
+      <Accordion />
+      <HBox layoutX="33.0" layoutY="140.0">
+         <children>
+            <VBox style="-fx-border-color: #c3c3c3; -fx-border-radius: 5;" />
+         </children>
+      </HBox>
+      <HBox layoutX="647.0" layoutY="127.0" style="-fx-border-color: #3f48cc; -fx-border-radius: 5;">
+         <children>
+            <JFXComboBox fx:id="combo_sana" focusColor="WHITE" prefHeight="36.0" prefWidth="151.0" promptText="text" style="-fx-font-size: 16;" unFocusColor="#c3c3c3" />
+         </children>
+      </HBox>
+      <Line endX="-148.0" endY="621.2929077148438" layoutX="1000.0" layoutY="101.0" startX="-148.0" startY="-100.0" stroke="#293a4c" strokeWidth="3.0" AnchorPane.bottomAnchor="5.20709228515625" AnchorPane.topAnchor="0.5" />
+      <HBox alignment="CENTER" layoutX="466.0" layoutY="104.0" prefHeight="93.0" prefWidth="533.0" spacing="20.0" AnchorPane.bottomAnchor="533.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="104.0">
+         <children>
+            <JFXButton prefHeight="91.0" prefWidth="244.0" style="-fx-background-color: #3681cb;" text=" ">
+               <graphic>
+                  <VBox alignment="CENTER" prefHeight="103.0" prefWidth="158.0">
+                     <children>
+                        <Label fx:id="lbl_klient" text="120" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиенты">
+                           <font>
+                              <Font name="Montserrat Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton prefHeight="91.0" prefWidth="231.0" style="-fx-background-color: #f8ad4a;" text=" ">
+               <graphic>
+                  <VBox alignment="CENTER" prefHeight="103.0" prefWidth="233.0">
+                     <children>
+                        <Label fx:id="lbl_ostat" text="150,000 UZS" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Общая задолженность">
+                           <font>
+                              <Font name="Montserrat Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="51.0" prefWidth="851.0" style="-fx-background-color: #293a4c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="515.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="108.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиенты ">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="46.0" layoutY="68.0" size="50" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table_klientlar" layoutX="854.0" layoutY="200.0" prefHeight="467.0" prefWidth="492.0" stylesheets="@../sotuvList/atchot/style.css" AnchorPane.bottomAnchor="63.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0">
+        <columns>
+          <TableColumn fx:id="col_nomi" prefWidth="151.0" text="Клиент " />
+          <TableColumn fx:id="col_adress" prefWidth="101.0" text="Адресс " />
+            <TableColumn fx:id="col_koment" prefWidth="130.0" text="Примечание " />
+            <TableColumn fx:id="col_qarz" prefWidth="105.0" text="Клиентский долг" />
+        </columns>
+      </TableView>
+      <Label layoutX="359.0" layoutY="189.0" prefHeight="45.0" prefWidth="87.0" text="Дата:" textFill="#293a4c">
+         <font>
+            <Font name="Montserrat Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="447.0" layoutY="199.0" prefHeight="27.0" prefWidth="45.0" text="С:" textFill="#7c7c7c">
+         <font>
+            <Font name="Montserrat Bold" size="16.0" />
+         </font>
+      </Label>
+      <HBox layoutX="481.0" layoutY="189.0" style="-fx-border-color: #c3c3c3; -fx-border-radius: 5;">
+         <children>
+            <JFXDatePicker fx:id="beginDate" defaultColor="#293a4c" onAction="#handle_sana" prefHeight="36.0" prefWidth="139.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="663.0" layoutY="191.0" prefHeight="36.0" prefWidth="153.0" style="-fx-border-color: #c3c3c3; -fx-border-radius: 5;">
+         <children>
+            <JFXDatePicker fx:id="endDate" defaultColor="#293a4c" onAction="#handle_sana" prefHeight="43.0" prefWidth="151.0" />
+         </children>
+      </HBox>
+      <Label layoutX="626.0" layoutY="199.0" prefHeight="27.0" prefWidth="29.0" text="до:" textFill="#7c7c7c">
+         <font>
+            <Font name="Montserrat Bold" size="16.0" />
+         </font>
+      </Label>
+      <TreeTableView fx:id="table_klient" layoutX="11.0" layoutY="237.0" prefHeight="498.0" prefWidth="832.0" stylesheets="@style.css" tableMenuButtonVisible="true">
+         <columns>
+            <TreeTableColumn fx:id="col_id" prefWidth="44.0" text="id" />
+            <TreeTableColumn fx:id="col_klient" prefWidth="145.0" text="Наименование" />
+            <TreeTableColumn prefWidth="204.0" resizable="false" text="    Задолженность клиента     ">
+               <columns>
+                  <TreeTableColumn fx:id="col_debit" prefWidth="116.0" text="Дебет сумма" />
+                  <TreeTableColumn fx:id="col_kredit" prefWidth="97.0" text="Кредит сумма" />
+                  <TreeTableColumn fx:id="col_kredit1" minWidth="0.0" prefWidth="0.0" text=" " />
+               </columns>
+            </TreeTableColumn>
+            <TreeTableColumn minWidth="0.0" prefWidth="150.0" text="Оплаченный">
+               <columns>
+                  <TreeTableColumn fx:id="col_summa" prefWidth="101.0" text="Сумма" />
+                  <TreeTableColumn fx:id="col_val" prefWidth="52.0" text="Вал" />
+               </columns>
+            </TreeTableColumn>
+            <TreeTableColumn fx:id="col_coment" prefWidth="141.0" text="Комментарий" />
+            <TreeTableColumn fx:id="col_sana" prefWidth="121.0" text="Дата операции" />
+         </columns>
+      </TreeTableView>
+   </children>
+</AnchorPane>

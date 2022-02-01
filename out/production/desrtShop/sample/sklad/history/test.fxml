@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="507.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.sklad.history.TestController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="789.0" style="-fx-background-color: #293a4c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="id:">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Text>
+            <Label fx:id="txt_id" alignment="CENTER" prefHeight="61.0" prefWidth="96.0" text="3" textFill="#2cb26f">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="61.0" prefWidth="512.0">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Nomi:" wrappingWidth="71.8515625">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="txtNomi" alignment="CENTER" prefHeight="61.0" prefWidth="420.0" text="060" textAlignment="CENTER" textFill="#2cb26f">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></HBox>
+      <AnchorPane layoutY="110.0" prefHeight="447.0" prefWidth="789.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <ComboBox fx:id="combo_tur_sana" layoutX="409.0" layoutY="7.0" onAction="#handle_combo" prefHeight="35.0" prefWidth="184.0" promptText="KUN" visibleRowCount="4" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="7.0" />
+            <DatePicker fx:id="data" layoutX="591.0" layoutY="7.0" onAction="#handle_sana" prefHeight="35.0" prefWidth="184.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="7.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </DatePicker>
+            <Label fx:id="txt_Summa" alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="42.0" prefWidth="242.0" text="Summa" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="427.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <TableView fx:id="table_sotuv" layoutY="169.0" prefHeight="362.0" prefWidth="789.0" style="-fx-border-color: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="86.0">
+               <columns>
+                  <TableColumn fx:id="col_SSturi" prefWidth="75.0" style="-fx-font-size: 16;" text="TURI" />
+                  <TableColumn fx:id="col_SSnarxi" prefWidth="75.0" style="-fx-font-size: 16;" text="NARX" />
+                  <TableColumn fx:id="col_SSsoni" prefWidth="75.0" style="-fx-font-size: 16;" text="SONI" />
+                  <TableColumn fx:id="col_SSUsumma" prefWidth="75.0" style="-fx-font-size: 16;" text="SUMMA" />
+                  <TableColumn fx:id="col_SSsana" prefWidth="75.0" style="-fx-font-size: 16;" text="SANA" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox layoutX="-3.0" layoutY="47.0" prefHeight="35.0" prefWidth="789.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnSotuv" prefHeight="39.0" prefWidth="394.0" text="Sotuv" textFill="#971b1b">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="btnKirim" prefHeight="21.0" prefWidth="382.0" text="Kirim" textFill="#0e0d61">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="table_kirim" layoutX="-5.0" layoutY="146.0" prefHeight="362.0" prefWidth="789.0" style="-fx-border-color: blue;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+               <columns>
+                  <TableColumn fx:id="col_turi" prefWidth="75.0" style="-fx-font-size: 16;" text="TURI" />
+                  <TableColumn fx:id="col_Snarxi" prefWidth="75.0" style="-fx-font-size: 16;" text="SOTISH" />
+                  <TableColumn fx:id="col_Knarxi" prefWidth="75.0" style="-fx-font-size: 16;" text="KELISH" />
+                  <TableColumn fx:id="col_soni" prefWidth="75.0" style="-fx-font-size: 16;" text="SONI" />
+                  <TableColumn fx:id="col_Usumma" prefWidth="75.0" style="-fx-font-size: 16;" text="SUMMA" />
+                  <TableColumn fx:id="col_sana" prefWidth="75.0" style="-fx-font-size: 16;" text="SANA" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Text fill="#293a4c" layoutX="20.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summa:" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</AnchorPane>

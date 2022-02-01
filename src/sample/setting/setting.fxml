@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e6e6e6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.setting.settingController">
+    <children>
+      <BorderPane style="-fx-background-color: white;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+         <left>
+              <VBox alignment="CENTER" maxWidth="590.0" minWidth="250.0" prefHeight="373.0" prefWidth="590.0" style="-fx-background-color: white;" BorderPane.alignment="TOP_CENTER">
+                  <opaqueInsets>
+                      <Insets />
+                  </opaqueInsets>
+                  <children>
+                  <HBox alignment="CENTER" prefHeight="200.0" prefWidth="590.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <AnchorPane prefHeight="74.0" prefWidth="280.0">
+                                 <children>
+                                    <ImageView fitHeight="78.0" fitWidth="72.0" layoutX="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../logos/logo.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="109.0" layoutY="23.0" prefHeight="37.0" prefWidth="171.0" text="rzonSHOP">
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#005fa1" />
+                                                <Stop color="#008aeb" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                       <font>
+                                          <Font name="Montserrat Bold" size="30.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="226.0" prefWidth="590.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets left="8.0" right="8.0" top="8.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Прежний пароль:">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="24.0" />
+                                 </font>
+                              </Text>
+                                  <JFXTextField fx:id="tft_pass" editable="false" focusColor="#4c00ff" focusTraversable="false" prefHeight="37.0" prefWidth="265.0" promptText="***" style="-fx-text-fill: #c3c3c3;" unFocusColor="#e6e6e6">
+                                      <font>
+                                          <Font name="Montserrat Bold" size="20.0" />
+                                      </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                  </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Новый пароль:" wrappingWidth="186.86399841308594">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <JFXTextField fx:id="tft_newpass" focusColor="#4c00ff" prefHeight="37.0" prefWidth="265.0" promptText="****" style="-fx-text-fill: #008aeb;">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="22.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <unFocusColor>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#130a8a" />
+                                          <Stop color="#008aeb" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </unFocusColor>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" visible="false">
+                           <children>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Smen:">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <JFXTextField fx:id="tft_smen" focusColor="#4c00ff" prefHeight="37.0" prefWidth="272.0" promptText="soat" text="16:10" unFocusColor="#e6e6e6">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                            <HBox alignment="CENTER" prefHeight="132.0" prefWidth="590.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                           <children>
+                                    <Button fx:id="btn_save" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handle_save" pickOnBounds="false" prefHeight="35.0" prefWidth="199.0" style="-fx-background-color: #293a4c; -fx-background-radius: 10;" text="Сохранить" textFill="#20d3b6" wrapText="true">
+                                        <cursor>
+                                            <Cursor fx:constant="HAND" />
+                                        </cursor>
+                                        <effect>
+                                            <Glow level="0.0" />
+                                        </effect>
+                                        <font>
+                                            <Font name="Montserrat Bold" size="18.0" />
+                                        </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                    </Button>
+                           </children>
+                            </HBox>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="560.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton onAction="#handle_back" prefHeight="53.0" prefWidth="45.0" style="-fx-background-color: #293a4c; -fx-background-radius: 100;" text=" " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FORWARD" rotate="180.0" size="30" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  </children>
+              </VBox>
+         </left>
+         <top>
+            <Separator style="-fx-background-color: #293a4c;" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </BorderPane.margin>
+            </Separator>
+         </top>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </BorderPane>
+    </children>
+</AnchorPane>

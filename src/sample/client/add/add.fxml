@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.client.add.AddController">
+   <children>
+      <AnchorPane disable="true" opacity="0.29" prefHeight="688.0" prefWidth="1068.0" style="-fx-background-color: #0e0920;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox layoutX="494.0" layoutY="34.0" prefHeight="553.0" prefWidth="502.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.leftAnchor="432.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="34.0">
+         <children>
+            <HBox prefHeight="39.0" prefWidth="480.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Label text="Добавить новый клиент">
+                     <font>
+                        <Font name="Montserrat Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton contentDisplay="CENTER" focusTraversable="false" onAction="#handle_cancel" style="-fx-background-radius: 15;" text="x" textAlignment="CENTER" textFill="#6b6868">
+                           <font>
+                              <Font name="Montserrat Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Line endX="400.29290771484375" startX="-100.0" stroke="#f2f2f2">
+               <effect>
+                  <DropShadow height="4.5" radius="0.625" width="0.0" />
+               </effect>
+            </Line>
+            <VBox prefHeight="222.0" prefWidth="502.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="482.0">
+                     <children>
+                        <Label text="Наименование" textFill="#9e9e9e">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="*" textFill="#cd2222">
+                           <font>
+                              <Font />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="309.0">
+                           <children>
+                              <TextField fx:id="tft_nomi" prefHeight="32.0" prefWidth="297.0" style="-fx-background-color: white; -fx-border-color: #d2d2d2; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="482.0">
+                     <children>
+                        <Label text="Адресс" textFill="#9e9e9e">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="*" textFill="#cd2222">
+                           <font>
+                              <Font />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="362.0">
+                           <children>
+                              <TextField fx:id="tft_adress" prefHeight="32.0" prefWidth="297.0" promptText=" улц.Ташкент" style="-fx-background-color: white; -fx-border-color: #d2d2d2; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="482.0">
+                     <children>
+                        <Label text="Телефон" textFill="#9e9e9e">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="*" textFill="#cd2222">
+                           <font>
+                              <Font />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="251.0">
+                           <children>
+                              <TextField fx:id="tft_tel" prefHeight="32.0" prefWidth="196.0" promptText="+998 xx xxx-xx-xx" style="-fx-background-color: white; -fx-border-color: #d2d2d2; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="482.0">
+                     <children>
+                        <Label text="Примечание" textFill="#9e9e9e">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="*" textFill="#cd2222">
+                           <font>
+                              <Font />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="326.0">
+                           <children>
+                              <TextField fx:id="tft_koment" prefHeight="32.0" prefWidth="297.0" style="-fx-background-color: white; -fx-border-color: #d2d2d2; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="482.0">
+                     <children>
+                        <Label text="ИНН:" textFill="#9e9e9e">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="382.0">
+                           <children>
+                              <TextField fx:id="tft_inn" prefHeight="32.0" prefWidth="297.0" promptText="00000000" style="-fx-background-color: white; -fx-border-color: #d2d2d2; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </VBox>
+            <JFXCheckBox fx:id="chb_tulov" checkedColor="#005fa1" text="Начальный остаток задолженность" textFill="#807e7e">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Montserrat Regular" size="16.0" />
+               </font>
+            </JFXCheckBox>
+            <Line endX="400.29290771484375" layoutX="111.0" layoutY="58.0" startX="-100.0" stroke="#f2f2f2">
+               <effect>
+                  <DropShadow height="4.5" radius="0.625" width="0.0" />
+               </effect>
+            </Line>
+            <VBox fx:id="vb_tulov" disable="true">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="481.0">
+                     <children>
+                        <Label text="Сумма задолженность" textFill="#9e9e9e">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="*" textFill="#cd2222">
+                           <font>
+                              <Font />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="20.0" prefWidth="254.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="32.0" text="Дата" textFill="#9e9e9e">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="*" textFill="#cd2222">
+                                 <font>
+                                    <Font />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <TextField fx:id="tft_kol" prefHeight="34.0" prefWidth="201.0" promptText="0.0" style="-fx-background-color: white; -fx-border-color: #d2d2d2; -fx-border-radius: 5;">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <HBox alignment="CENTER" prefHeight="32.0" prefWidth="314.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <VBox style="-fx-border-color: #d2d2d2; -fx-border-radius: 5;">
+                                 <children>
+                                    <JFXDatePicker fx:id="dt_sana" defaultColor="#9e9e9e" prefHeight="32.0" prefWidth="171.0" stylesheets="@style.css" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <Line endX="400.29290771484375" layoutX="111.0" layoutY="301.0" startX="-100.0" stroke="#f2f2f2">
+               <effect>
+                  <DropShadow height="4.5" radius="0.625" width="0.0" />
+               </effect>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Line>
+            <HBox alignment="CENTER_RIGHT" prefHeight="119.0" prefWidth="502.0" spacing="30.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#handle_cancel" prefHeight="40.0" prefWidth="105.0" style="-fx-background-radius: 5; -fx-background-color: white; -fx-border-color: #ec5355; -fx-border-radius: 5;" text="Отменить " textFill="#ec5355">
+                     <font>
+                        <Font name="Montserrat Regular" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#handle_save" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #005fa1; -fx-background-radius: 5;" text="Сохранить" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Montserrat Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

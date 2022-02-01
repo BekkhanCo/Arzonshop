@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.savdo.list.listController">
+   <children>
+      <VBox layoutX="250.0" layoutY="-6.0" prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #c3c3c3;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox>
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="40" wrappingWidth="49.0">
+                     <effect>
+                        <DropShadow />
+                     </effect></FontAwesomeIconView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Список продаж">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <JFXButton cancelButton="true" defaultButton="true" focusTraversable="false" onAction="#handle_close" text=" " />
+                  <HBox alignment="CENTER_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="tft_cash" editable="false" focusTraversable="false" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: #c3c3c3; -fx-text-fill: #293a4c;" text="0">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../ICONS/funds.png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="0.05" contrast="-0.05" hue="0.4" saturation="-0.5" />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <TextField fx:id="tft_card" editable="false" focusTraversable="false" layoutX="173.0" layoutY="11.0" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: #c3c3c3; -fx-text-fill: #293a4c;" text="0">
+                           <font>
+                              <Font name="Microsoft JhengHei Bold" size="14.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </TextField>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../ICONS/credit-card%20(1).png" />
+                                 </image>
+                                 <effect>
+                                    <ColorAdjust brightness="0.14" contrast="1.0" hue="0.45" saturation="1.0" />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets right="3.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" top="2.0" />
+         </padding>
+      </VBox>
+      <VBox layoutY="46.0" prefHeight="354.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+         <children>
+            <TableView fx:id="table_list" prefHeight="353.0" prefWidth="600.0" stylesheets="@style.css">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="75.0" style="-fx-font-size: 16; -fx-font-family: Montserat;" text="№" />
+                <TableColumn fx:id="col_turi" editable="false" prefWidth="75.0" sortable="false" style="-fx-font-size: 16; -fx-font-family: Arial;" text="Наименование " />
+                  <TableColumn fx:id="col_soni" editable="false" prefWidth="75.0" sortable="false" style="-fx-font-size: 16; -fx-font-family: Arial;" text="Кол-во" />
+                  <TableColumn fx:id="col_narx" editable="false" prefWidth="75.0" sortable="false" style="-fx-font-size: 16; -fx-font-family: Arial;" text="Цена" />
+                  <TableColumn fx:id="col_summa" editable="false" prefWidth="75.0" sortable="false" style="-fx-font-size: 16; -fx-font-family: Arial;" text="Сумма" />
+                  <TableColumn fx:id="col_check" editable="false" prefWidth="75.0" sortable="false" style="-fx-font-size: 16; -fx-font-family: Arial;" text="Чек" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

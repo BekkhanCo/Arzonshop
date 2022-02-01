@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #293a4c;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.savdo.SotuvController">
+   <children>
+      <VBox layoutX="20.0" layoutY="20.0" prefHeight="680.0" prefWidth="795.0" style="-fx-background-color: #293a4c; -fx-background-radius: 5;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="455.0" AnchorPane.topAnchor="10.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="114.0" prefWidth="416.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Text fill="#8cfffb" strokeType="OUTSIDE" strokeWidth="0.0" text="Общий:" wrappingWidth="137.8181915283203">
+                           <font>
+                              <Font name="Arial Black" size="31.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="lblUsumma" prefHeight="109.0" prefWidth="490.0" style="-fx-border-color: #787878; -fx-border-radius: 5; -fx-background-color: #585858;" text="0.0" textFill="#c4ff0e">
+                           <font>
+                              <Font name="Montserrat Bold" size="41.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="108.0" prefWidth="349.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="349.0">
+                           <children>
+                              <Text fill="#8cfffb" strokeType="OUTSIDE" strokeWidth="0.0" text="Остаток:">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="3.0" left="40.0" right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Label fx:id="lblQoldiq" prefHeight="54.0" prefWidth="201.0" style="-fx-border-color: #787878; -fx-border-radius: 5; -fx-background-color: #585858;" text="..." textAlignment="RIGHT" textFill="#ff0f0f">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="23.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="75.0" prefWidth="349.0">
+                           <children>
+                              <Text fill="#8cfffb" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена:">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Label fx:id="lblNarx" prefHeight="56.0" prefWidth="305.0" style="-fx-border-color: #787878; -fx-border-radius: 5; -fx-background-color: #585858;" text="..." textFill="#ff0f0f">
+                                 <font>
+                                    <Font name="Montserrat Bold" size="30.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="409.0" prefWidth="851.0" style="-fx-border-color: #787878; -fx-border-radius: 5;" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="table_Sotuv" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #c7c9be;" stylesheets="@tulov/all.css" HBox.hgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="col_nomer" prefWidth="87.0" style="-fx-font-size: 16;" text="№" />
+                        <TableColumn fx:id="col_nomi" prefWidth="380.0" style="-fx-font-size: 16;" text="Наименования " />
+                        <TableColumn fx:id="col_soni" minWidth="0.0" prefWidth="159.0" style="-fx-font-size: 16;" text="Кол-во " />
+                        <TableColumn fx:id="col_narxi" prefWidth="142.0" style="-fx-font-size: 16;" text="Цена" />
+                        <TableColumn fx:id="col_summa" prefWidth="145.0" style="-fx-font-size: 16;" text="Сумма" />
+                     </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <VBox prefHeight="136.0" prefWidth="472.0" style="-fx-background-color: #293a4c;" VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="132.0" prefWidth="851.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="txtNomi" layoutX="50.0" layoutY="6.0" prefHeight="121.0" prefWidth="574.0" style="-fx-border-color: #787878; -fx-border-radius: 5; -fx-background-color: #585858;" text="Товар ...." textFill="#c7c9be" wrapText="true" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="201.0">
+                           <font>
+                              <Font name="Montserrat Regular" size="38.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="txtTur" layoutX="497.0" layoutY="14.0" prefHeight="39.0" prefWidth="179.0" style="-fx-border-color: #787878; -fx-border-radius: 5; -fx-background-color: #585858;" text="..." textFill="#c7c9be" wrapText="true" AnchorPane.rightAnchor="14.0">
+                           <font>
+                              <Font name="Montserrat Regular" size="26.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Text fill="#8cfffb" layoutX="657.0000279871747" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Категория" wrappingWidth="162.00000310968608" AnchorPane.rightAnchor="31.999968903139234">
+                           <font>
+                              <Font name="Montserrat Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <JFXButton cancelButton="true" layoutX="-7.0" layoutY="86.0" onAction="#handle_back" prefHeight="43.0" prefWidth="26.0" text=" " textFill="#e1d6d6">
+                           <font>
+                              <Font name="Montserrat Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@ICONS/open-exit-door%20(1).png" />
+                                 </image>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox layoutX="961.0" layoutY="21.0" prefHeight="664.0" prefWidth="445.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5; -fx-background-color: white;" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <VBox.margin>
+                  <Insets right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <JFXComboBox fx:id="combo_nomi" editable="true" focusColor="#c4ff0e" focusTraversable="false" prefHeight="38.0" prefWidth="321.0" promptText="Подбор товара ..." style="-fx-font-family: Montserrat; -fx-font-size: 16;" unFocusColor="#979797">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </JFXComboBox>
+                  <JFXButton fx:id="btn_list" buttonType="RAISED" onAction="#handle_list" prefHeight="38.0" prefWidth="57.0" ripplerFill="#4d4d4d" style="-fx-background-color: #152638;" text=" " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="30" />
+                     </graphic>
+                     <padding>
+                        <Insets left="11.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <tooltip>
+                        <Tooltip text="DELETE" />
+                     </tooltip>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="kassir:" textFill="#152638">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label text=" | ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_kassir" text="Bekkhan" textFill="#152638">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lbl_sana" layoutX="116.0" layoutY="16.0" text="30-04-2021" textFill="#152638">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="145.0" layoutY="19.0" text=" | ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_soat" layoutX="151.0" layoutY="10.0" text="30:25" textFill="#152638">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="txtMiqdor" alignment="CENTER_RIGHT" editable="false" prefHeight="90.0" prefWidth="410.0" unFocusColor="#949494">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField fx:id="txtKiritish" alignment="CENTER_RIGHT" editable="false" prefHeight="66.0" prefWidth="320.0" promptText="0" text="0" unFocusColor="BLACK">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </JFXTextField>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER" prefWidth="311.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="65.0" prefWidth="463.0" spacing="2.0">
+                                 <children>
+                                    <JFXButton onAction="#hendle_btnYetti" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="7" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_btnSakkiz" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="8" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_btnToqqiz" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="9" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="65.0" prefWidth="463.0" spacing="2.0">
+                                 <children>
+                                    <JFXButton onAction="#hendle_btnTort" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="4" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_btnBesh" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="5" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_btnOlti" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="6" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="65.0" prefWidth="463.0" spacing="2.0">
+                                 <children>
+                                    <JFXButton onAction="#hendle_btnBir" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="1" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_btn_Ikki" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="2" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_btnUch" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="3" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="65.0" prefWidth="463.0" spacing="2.0">
+                                 <children>
+                                    <JFXButton onAction="#hendle_btnNol" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="0" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_Clear" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="C" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                    <JFXButton onAction="#hendle_CClear" prefHeight="56.0" prefWidth="100.0" style="-fx-border-color: grey; -fx-border-radius: 5;" text="C+" textFill="#88001b">
+                                       <font>
+                                          <Font name="System Bold" size="26.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="260.0" prefWidth="90.0" style="-fx-background-color: white;">
+                           <children>
+                              <VBox>
+                                 <VBox.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXButton fx:id="btnFind" buttonType="RAISED" defaultButton="true" onAction="#hendle_find" prefHeight="161.0" prefWidth="92.0" ripplerFill="#c4ff0e" style="-fx-background-color: #152638; -fx-border-radius: 10;" text=" " textFill="#c4ff0e">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                       <graphic>
+                                          <VBox alignment="CENTER" prefHeight="128.0" prefWidth="66.0">
+                                             <children>
+                                                <ImageView fitHeight="52.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@ICONS/index.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <effect>
+                                                <Bloom />
+                                             </effect>
+                                          </VBox>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Bloom threshold="0.16" />
+                                       </effect>
+                                       <tooltip>
+                                          <Tooltip text="PROBEL" />
+                                       </tooltip>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </VBox>
+                              <VBox>
+                                 <VBox.margin>
+                                    <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <JFXButton fx:id="btnMiqdor" buttonType="RAISED" onAction="#handle_clean" prefHeight="88.0" prefWidth="94.0" style="-fx-background-color: #585858; -fx-border-radius: 10;" text=" " textFill="#c4ff0e">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <VBox alignment="CENTER" prefHeight="91.0" prefWidth="64.0">
+                                             <children>
+                                                <ImageView fitHeight="46.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@ICONS/undo%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <effect>
+                                                <Bloom />
+                                             </effect>
+                                          </VBox>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <effect>
+                                          <Bloom threshold="0.16" />
+                                       </effect>
+                                       <tooltip>
+                                          <Tooltip text="HOME" />
+                                       </tooltip>
+                                    </JFXButton>
+                                 </children>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="123.0" prefWidth="410.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" onAction="#hendle_Add" prefHeight="120.0" prefWidth="100.0" ripplerFill="#c4ff0e" style="-fx-background-radius: 15; -fx-background-color: #152638;" text=" " textAlignment="CENTER" textFill="#c4ff0e">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                           <graphic>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="94.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ICONS/add%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="KEY *" />
+                           </tooltip>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" onAction="#hendle_remove" prefHeight="120.0" prefWidth="100.0" ripplerFill="#e8e2e2" style="-fx-background-radius: 15; -fx-background-color: #585858;" text=" " textFill="#00a8f3">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <VBox alignment="CENTER" prefHeight="94.0" prefWidth="74.0">
+                                 <children>
+                                    <ImageView fitHeight="59.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@ICONS/trash-bin.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" onAction="#hendle_Sell" prefHeight="120.0" prefWidth="100.0" style="-fx-background-color: #3f48cc; -fx-background-radius: 10;" text=" " textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="89.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="68.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@ICONS/money.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="PAGE_UP" />
+                           </tooltip>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="300.0" layoutY="19.0" onAction="#handle_plastik" prefHeight="120.0" prefWidth="100.0" style="-fx-background-color: #3f48cc; -fx-background-radius: 10;" text=" " textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <graphic>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="89.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="68.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ImageView fitHeight="89.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@ICONS/credit-card-payment.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="PAGE_DOWN" />
+                           </tooltip>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

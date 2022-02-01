@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="490.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.prixod.List.listController">
+   <children>
+      <AnchorPane layoutX="14.0" prefHeight="114.0" prefWidth="850.0" style="-fx-background-color: #293a4c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="108.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Список прием товаров">
+               <font>
+                  <Font name="Montserrat Regular" size="35.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fill="WHITE" glyphName="INBOX" layoutX="42.0" layoutY="74.0" size="50" />
+            <HBox alignment="CENTER" layoutX="558.0" layoutY="33.0" prefHeight="31.0" prefWidth="351.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="lbl_soat" text="21:16:11" textFill="#1ecd4a">
+                     <font>
+                        <Font name="System Bold" size="62.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox layoutY="114.0" prefHeight="376.0" prefWidth="909.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <VBox prefHeight="364.0" prefWidth="508.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="850.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск:" textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="tft_search" prefHeight="25.0" prefWidth="102.0" promptText="////........." text="..." HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <ComboBox fx:id="combo_tur" onAction="#handle_combo_tur" prefHeight="51.0" prefWidth="298.0" promptText="Выбирать!">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <DatePicker fx:id="date_sanasi" onAction="#handle_sana" prefHeight="50.0" prefWidth="235.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <TextField fx:id="tft_summa" editable="false" prefHeight="55.0" prefWidth="332.0" promptText="0.0 $">
+                           <HBox.margin>
+                              <Insets bottom="5.0" right="50.0" top="5.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" spacing="50.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTreeTableView fx:id="table_prixod" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </JFXTreeTableView>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <JFXButton onAction="#handle_back" prefHeight="37.0" prefWidth="210.0" style="-fx-background-color: #293a4c; -fx-background-radius: 10;" text="Назад" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FORWARD" size="15" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+CHECK_PRINTER=Xprinter XP-370B
+SOTUV_CHECK_PRINTER=XP-80C
+URL_SHTRIX=C:\\Users\\imBOB\\Desktop\\NEW\\Report\\shtrix.jrxml
+URL_CHECK=C:\\Users\\imBOB\\Desktop\\NEW\\Report\\Printer_chek.jrxml
+HOST=DESKTOP-10IBV0G
+PORT=3306
+DATABASE=dukon
+USER=kassa1
+PAROL=14237856

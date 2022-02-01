@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.client.tulov.TulovController">
+   <children>
+      <AnchorPane layoutY="-6.0" opacity="0.29" prefHeight="688.0" prefWidth="1068.0" style="-fx-background-color: #0e0920;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0" />
+      <VBox layoutX="494.0" layoutY="34.0" prefHeight="576.0" prefWidth="502.0" style="-fx-background-color: white; -fx-background-radius: 10;" stylesheets="@../../savdo/tulov/all.css" AnchorPane.leftAnchor="432.0" AnchorPane.rightAnchor="432.0" AnchorPane.topAnchor="34.0">
+         <children>
+            <VBox maxWidth="510.0" minWidth="450.0" prefHeight="553.0" prefWidth="510.0" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="437.0" style="-fx-border-color: #c3c3c3; -fx-border-radius: 5;">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="38.0" prefWidth="54.0" style="-fx-border-color: transparent  c3c3c3 transparent transparent;">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                           <children>
+                              <FontAwesomeIconView fill="#6f6f6f" glyphName="USER" size="18" />
+                           </children>
+                        </VBox>
+                        <JFXComboBox fx:id="combo_mijoz" editable="true" maxWidth="1.7976931348623157E308" prefHeight="34.0" prefWidth="388.0" promptText="Выберите клиента..." style="-fx-font-size: 14; -fx-font-weight: bold; -fx-font-family: Montserrat;" unFocusColor="WHITE" HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="btn_mijoz_add" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" prefHeight="38.0" prefWidth="29.0" style="-fx-border-color: transparent transparent transparent c3c3c3;" text=" ">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Text fx:id="lb_balans_sum" strokeType="OUTSIDE" strokeWidth="0.0" />
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="135.0" prefWidth="220.0" spacing="10.0">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="45.0" prefWidth="437.0" spacing="10.0" styleClass="Hb-border">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="146.0" style="-fx-font-weight: bold; -fx-text-fill: #6f6f6f; -fx-border-color: transparent  c3c3c3 transparent transparent; -fx-font-size: 14;" text="Курс и валюта:" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                              </Label>
+                              <JFXTextField fx:id="edit_kurs" focusTraversable="false" prefHeight="25.0" prefWidth="157.0" unFocusColor="WHITE" />
+                              <HBox style="-fx-border-color: transparent transparent transparent c3c3c3;" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <JFXComboBox fx:id="combo_savdo_val" focusTraversable="false" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="165.0" unFocusColor="WHITE" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefWidth="437.0" spacing="10.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: grey; -fx-font-size: 16;" text="Задолженность:" />
+                              <Label fx:id="lb_jami_summa" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="0" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb_jami_summa_dol" alignment="CENTER_RIGHT" layoutX="108.0" layoutY="10.0" maxWidth="1.7976931348623157E308">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: green; -fx-font-size: 14;" text="Оплаченный:" />
+                              <Label fx:id="lb_tolov_summa" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" style="-fx-text-fill: green; -fx-font-weight: bold;" text="0" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb_tolov_summa_dol" alignment="CENTER_RIGHT" layoutX="78.0" layoutY="10.0" maxWidth="1.7976931348623157E308" style="-fx-text-fill: green; -fx-font-weight: bold;">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label style="-fx-font-weight: bold; -fx-text-fill: red; -fx-font-size: 14;" text="Остаток:" />
+                              <Label fx:id="lb_itog_summa" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" style="-fx-text-fill: red; -fx-font-weight: bold;" text="0" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lb_itog_summa_dol" alignment="CENTER_RIGHT" layoutX="95.0" layoutY="10.0" maxWidth="1.7976931348623157E308" style="-fx-text-fill: red; -fx-font-weight: bold;">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="489.0" spacing="20.0" style="-fx-border-color: #c3c3c3; -fx-border-width: 1 0 0 0;" styleClass="Hb-border" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="13.0" layoutY="317.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="16.0" prefWidth="445.0">
+                           <children>
+                              <Label text="Валюта" />
+                              <Label layoutX="10.0" layoutY="11.0" text="*" textFill="#f51313" />
+                              <HBox alignment="CENTER_RIGHT" prefHeight="15.0" prefWidth="179.0">
+                                 <children>
+                                    <Label text="Сумма " />
+                                    <Label layoutX="10.0" layoutY="10.0" text="*" textFill="#d00909" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="13.0" layoutY="297.0" spacing="5.0">
+                     <children>
+                        <HBox prefHeight="41.0" prefWidth="171.0" styleClass="Hb-border" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXComboBox fx:id="combo_tolov_val" focusTraversable="false" maxWidth="1.7976931348623157E308" prefHeight="76.0" prefWidth="121.0" unFocusColor="WHITE" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox styleClass="Hb-border">
+                           <children>
+                              <JFXTextField fx:id="edit_summa" focusTraversable="false" prefHeight="39.0" prefWidth="259.0" unFocusColor="WHITE" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="btn_tolov_add" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" onAction="#handle_tolov_add" prefHeight="36.0" prefWidth="37.0" style="-fx-background-color: #005fa1; -fx-background-radius: 5;" styleClass="Hb-border" text=" ">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="16" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_tolov_edit" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" onAction="#handle_tolov_edit" prefHeight="36.0" prefWidth="20.0" style="-fx-border-color: #005fa1;" styleClass="Hb-border" text=" ">
+                           <graphic>
+                              <FontAwesomeIconView fill="#005fa1" glyphName="EDIT" size="16" wrappingWidth="14.0" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_tolov_delete" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" onAction="#handle_tolov_delete" prefHeight="37.0" prefWidth="31.0" style="-fx-border-color: #005fa1;" styleClass="Hb-border" text=" ">
+                           <graphic>
+                              <FontAwesomeIconView fill="#005fa1" glyphName="TRASH" size="16" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView fx:id="tableTolov" focusTraversable="false" maxHeight="155.0" prefHeight="155.0" prefWidth="436.0" style="-fx-border-color: #c3c3c3; -fx-border-width: 1 0 0 0;">
+                     <columns>
+                        <TableColumn fx:id="col_no" prefWidth="116.3333740234375" text="№" />
+                        <TableColumn fx:id="col_tolov_summa" prefWidth="247.6666259765625" text="Сумма" />
+                        <TableColumn fx:id="col_tolov_val" maxWidth="384.33331298828125" minWidth="60.0" prefWidth="127.33331298828125" text="Вал" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TableView>
+                  <VBox alignment="CENTER" prefWidth="501.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <children>
+                              <JFXButton focusTraversable="false" maxWidth="1.7976931348623157E308" onAction="#handle_cansel" prefHeight="55.0" prefWidth="469.0" style="-fx-font-size: 16; -fx-background-color: white; -fx-border-color: red; -fx-border-radius: 5; -fx-text-fill: red; -fx-font-weight: 100;" styleClass="buttonFon" text="Отмена">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_sotish" focusTraversable="false" maxWidth="1.7976931348623157E308" onAction="#handle_Sotish" prefHeight="48.0" prefWidth="631.0" style="-fx-font-size: 16;" styleClass="buttonFon" text="Сохранить">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children></HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="7.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets left="3.0" right="10.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

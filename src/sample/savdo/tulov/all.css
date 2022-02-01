@@ -1,0 +1,168 @@
+.glyph-icon{
+    -fx-font-family: FontAwesome;
+}
+.main-box{
+    -fx-background-color: #fff;
+}
+.Hb-border{
+   -fx-border-color:  #c3c3c3;
+   -fx-border-radius:5;
+}
+.label{
+   -fx-font-family:Montserrat;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.tree-table-view *.column-resize-line {
+    -fx-background-color: black;
+    -fx-background: black;
+}
+.table-view .column-header-background, .tree-table-view .column-header-background{
+    -fx-background-insets: 0px, 0px;
+}
+.table-view *.column-header, .tree-table-view .column-header-background .table-column{
+    -fx-background-color: white;
+    -fx-text-fill: white;
+    -fx-text-background-color: #6f6f6f;
+    -fx-padding: 0;
+    -fx-border-insets: 0;
+    -fx-background-insets: 0;
+    -fx-end-margin: 0;
+    -fx-start-margin: 0;
+    -fx-border-color: transparent #c3c3c3 transparent #c3c3c3;
+}
+
+.table-view .table-row-cell, .tree-table-view .tree-table-row-cell, .list-view .list-cell{
+    -fx-background-color: white;
+    -fx-table-cell-border-color: white;
+}
+.table-view *.table-row-cell .text, .tree-table-view *.tree-table-row-cell *.table-column *.text {
+    -fx-fill: #003400;
+}
+.table-view .table-row-cell:odd, .list-view .list-cell:odd, .tree-table-view *.tree-table-row-cell:odd{
+    -fx-border-width: 0;
+    -fx-background-color: #f5f5f5;
+    -fx-fill: #6cc2d5;
+}
+
+
+
+.table-view .table-row-cell:selected, .table-view .table-row-cell:selected .text, .tree-table-view .tree-table-row-cell:selected, .tree-table-view *.tree-table-row-cell:selected *.table-column *.text, .list-view .list-cell:selected, .list-view .list-cell:selected .text, .auto-complete-popup * .list-view .list-cell:selected .text, .auto-complete-popup * .list-view .list-cell:selected {
+    -fx-background-color: #6cc2d5 !important;
+    -fx-table-cell-border-color: #293a4c;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+
+.tree-table-view, .table-view, .list-view{
+    -fx-background-color: transparent;
+}
+/*.tree-table-view *.placeholder{*/
+/*    -fx-background-color: transparent;*/
+/*    -fx-base: transparent;*/
+/*}*/
+
+.btn-default, .jfx-button{
+    -jfx-button-type: RAISED;
+    -fx-text-fill: #262656;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.glyph-icon {
+    -fx-font-family: "FontAwesome";
+    -fx-font-size: 16px;
+}
+
+.glyphIcon-Savdo {
+    -fx-font-family: "FontAwesome";
+    -fx-font-size: 30px;
+}
+
+.menu-btn{
+    -fx-background-color: rgba(0,0,0,0.01);
+    -fx-pref-height: 45px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.menu-icon{
+    -fx-fill: #fdfdfd;
+    -glyph-size: 20px;
+}
+
+.split-pane>*.split-pane-divider {
+    -fx-background-color: linear-gradient(to right, #c3c3c3, #555555, #666666);
+}
+.scroll-pane{
+    -fx-base: transparent;
+    -fx-background-color: transparent;
+}
+
+.main-box{
+    -fx-background-color: rgba(210,210,210,1);
+}
+.text-header{
+    -fx-font-weight: bold;
+    -fx-text-fill: #293a4c;
+}
+.jfx-text-field{
+    -fx-text-fill: #293a4c;
+}
+.text-body {
+    -fx-font-weight: bold;
+    -fx-text-fill: green;
+}
+.btn-default{
+
+}
+
+.list-view {
+    -fx-border-width: 1 1 0 0;
+    -fx-border-color: #ddd;
+}
+.list-view .list-cell .text{
+    -fx-fill: #293a4c;
+    -fx-font-weight: 700;
+}
+
+.tree-table-view  .border-left .tree-table-cell {
+    -fx-table-cell-border-width: 0 0 0 2;
+}
+
+.tree-table-view .border-right .tree-table-cell {
+    -fx-table-cell-border-width: 0 2 0 0;
+}
+
+.red-row.table-row-cell, .red-row.table-row-cell:odd, .red-row.tree-table-row-cell, .red-row.tree-table-row-cell:odd{
+    -fx-background-color: #de4b4b;
+}
+.red-row.table-row-cell:selected, .red-row.table-row-cell:odd:selected, red-row.tree-table-row-cell:selected, .red-row.tree-table-row-cell:odd:selected{
+    -fx-background-color: #6cc2d5;
+}
+
+.header-text, .header-text .text{
+    -fx-font-family: SansSerif;
+    -fx-font-weight: bold;
+    -fx-font-size: 11pt;
+    -fx-fill: green;
+    -fx-text-fill: green;
+}
+
+
+.jfx-button { /* FX theme stylesheet */
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-cursor: hand;
+}
+
+.buttonFon{
+    -fx-background-color:  #293a4c;
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+}

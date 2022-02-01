@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Home.Controller">
+   <children>
+      <AnchorPane prefHeight="496.0" prefWidth="764.0">
+         <children>
+            <AnchorPane layoutX="-76.0" layoutY="-76.0" prefHeight="487.0" prefWidth="606.0" style="-fx-border-color: #293a4c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" layoutY="200.0" prefHeight="507.0" prefWidth="764.0" spacing="20.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="70.0">
+                           <VBox.margin>
+                              <Insets top="200.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton fx:id="btn_ombor" onAction="#handle_ombor" prefHeight="107.0" prefWidth="133.0" style="-fx-background-color: #f6f4f7;">
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="105.0" prefWidth="111.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="#293a4c" glyphName="HOME" size="40" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ombor" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_foyda" onAction="#handle_foyda" prefHeight="107.0" prefWidth="133.0" style="-fx-background-color: #f6f4f7;">
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="105.0" prefWidth="111.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="#293a4c" glyphName="LIST" size="40" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hisobot" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_sotuv" onAction="#hendle_Sotuv" prefHeight="107.0" prefWidth="133.0" style="-fx-background-color: #f6f4f7;">
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="105.0" prefWidth="111.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="#293a4c" glyphName="MONEY" size="40" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Foyda" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="70.0">
+                           <children>
+                              <JFXButton fx:id="btn_prixod" onAction="#handle_prixod" prefHeight="107.0" prefWidth="133.0" style="-fx-background-color: #f6f4f7;">
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="105.0" prefWidth="111.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="#293a4c" glyphName="EXCHANGE" size="40" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="KIRIM" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_kassa" onAction="#handle_kassa" prefHeight="107.0" prefWidth="133.0" style="-fx-background-color: #f6f4f7;">
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="105.0" prefWidth="111.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="#293a4c" glyphName="DOLLAR" size="40" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kassa" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btn_settings" onAction="#handle_settings" prefHeight="107.0" prefWidth="133.0" style="-fx-background-color: #f6f4f7;">
+                                 <graphic>
+                                    <VBox alignment="CENTER" prefHeight="105.0" prefWidth="111.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="#293a4c" glyphName="BARS" size="40" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sotuv Ro'yxat" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <VBox alignment="CENTER" layoutX="3.0" layoutY="10.0" prefHeight="200.0" prefWidth="777.0" style="-fx-background-color: #293a4c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lbl_soat" layoutX="548.0" layoutY="64.0" text="13:09:58" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="37.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_sana" layoutX="591.0" layoutY="107.0" text="40-03-2021" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Text fill="#c4ff0e" layoutX="100.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arzon">
+                           <font>
+                              <Font size="55.0" />
+                           </font>
+                        </Text>
+                        <FontAwesomeIconView fill="#c4ff0e" glyphName="DROPBOX" layoutX="25.0" layoutY="125.0" size="70" wrappingWidth="61.0" />
+                        <Text fill="#c4ff0e" layoutX="257.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHOP" wrappingWidth="48.662109375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#c4ff0e" layoutX="100.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIJORAT DO'KONI">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <JFXButton defaultButton="true" layoutX="716.0" layoutY="162.0" onAction="#handle_back" prefHeight="32.0" prefWidth="31.0" text=" " textFill="#9a9494">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../sotuv/ICONS/open-exit-door%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton layoutX="670.0" layoutY="162.0" onAction="#handle_sozlama" text=" " textFill="#9a9494">
+                           <graphic>
+                              <FontAwesomeIconView fill="#908c8c" glyphName="WRENCH" size="25" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

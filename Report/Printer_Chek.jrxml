@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="chekPrinter" printOrder="Horizontal" pageWidth="204" pageHeight="800" whenNoDataType="AllSectionsNoDetail" columnWidth="204" leftMargin="0" rightMargin="0" topMargin="14" bottomMargin="14" whenResourceMissingType="Empty" uuid="64af02c9-db35-490e-93f8-fd9a27040087">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="firma_nomi" class="java.lang.String"/>
+	<field name="telefon" class="java.lang.String"/>
+	<field name="kassir" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="sana" class="java.lang.String"/>
+	<field name="nomer" class="java.lang.Integer"/>
+	<field name="tovar" class="java.lang.String"/>
+	<field name="dona" class="java.lang.String"/>
+	<field name="narx" class="java.lang.String"/>
+	<field name="summa" class="java.lang.String"/>
+	<field name="um_summa" class="java.lang.String"/>
+	<field name="new_balans" class="java.lang.String"/>
+	<field name="old_balans" class="java.lang.String"/>
+	<field name="nasiya" class="java.lang.String"/>
+	<field name="holat" class="java.lang.String"/>
+	<field name="chegirma" class="java.lang.String"/>
+	<field name="tolov" class="java.lang.String"/>
+	<field name="tel" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="30" y="-11" width="136" height="16" uuid="e96d8ca1-1406-4229-8895-549b1b53d06f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firma_nomi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="30" width="130" height="12" uuid="25d5c8ce-68f6-4a4f-aa3f-f8c1a0d20b95">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kassir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="18" width="48" height="12" uuid="903cda7e-c44c-4c7f-a00b-5d28ef573cab">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="18" width="70" height="12" uuid="cc09fff9-c5ed-4377-8502-c07f705a9c2c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sana}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="18" width="27" height="12" uuid="aa2d5c6e-51ed-4c75-9d06-2a486d155167">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Чек:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="30" width="42" height="12" uuid="0ea3c878-57e9-41e7-ab1d-833347532ed3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Кассир :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="15" y="58" width="164" height="1" uuid="4327fea6-a910-4eb0-a6a0-98e903ff757d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="16" y="0" width="10" height="12" uuid="7f20c6b5-ece4-4cc4-bb4b-67a6571d1526">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4358ea86-0bbf-4046-bf84-e29187528293"/>
+					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="true"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="0" width="153" height="12" uuid="8229ba4a-c807-4789-8de8-80144619c647">
+					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="true"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+					<paragraph lineSpacing="Proportional"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tovar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="12" width="130" height="12" uuid="40d3d371-165e-4490-aa9f-8c65708b7eae">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+					<paragraph lineSpacing="Proportional"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{summa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="16" y="24" width="163" height="1" uuid="1308bc8a-2af4-4e6a-a518-70177fc04d63">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="90" splitType="Stretch">
+			<textField>
+				<reportElement x="49" y="2" width="130" height="12" uuid="1b2ae0de-afa5-4fe7-ab8d-e9073cb73634">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="styled">
+					<font fontName="Arial" size="9" isBold="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{um_summa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="2" width="34" height="12" uuid="dfb14307-d729-45b0-a2e8-3bb3033dfca8">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Савдо :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="15" width="119" height="12" uuid="1383a444-0d27-4243-b93d-c5d29564ee67">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{chegirma}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="15" width="45" height="12" uuid="23eae7d9-1296-4062-8828-004670a34e6d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Скидка:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="41" width="34" height="12" uuid="7004b8ae-aa6a-4f7f-9e4b-b8f52b9032ff">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Насия:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="49" y="41" width="130" height="12" uuid="7c13e75e-ffd9-4f01-bdae-e9b7eb616696">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nasiya}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="28" width="34" height="12" uuid="03981dc2-cddd-4724-9943-9f2cd4af9c01">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Тўлов :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="49" y="28" width="130" height="12" uuid="05b8441c-0f9e-4d38-abe5-f3dd5f6e910d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" markup="styled">
+					<font fontName="Arial" size="9" isBold="true"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tolov}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="70" width="177" height="18" uuid="29b3b7d6-2016-4ddf-9c95-680b801bb55f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Харидингиз учун рахмат!]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

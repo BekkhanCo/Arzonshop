@@ -1,0 +1,9 @@
+.jfx-date-picker .text-field{
+-jfx-unfocus-color: White;
+-fx-prompt-text-fill: White;
+-fx-text-fill: White;
+-fx-font-size: 16.0;
+}
+.{
+  -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #294a5d, #47687b);
+}

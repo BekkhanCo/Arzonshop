@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="490.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.prixod.prixodController">
+   <children>
+      <AnchorPane layoutX="14.0" prefHeight="114.0" prefWidth="850.0" style="-fx-background-color: #293a4c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="108.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRIXOD">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fill="WHITE" glyphName="INBOX" layoutX="42.0" layoutY="74.0" size="50" />
+         </children>
+      </AnchorPane>
+      <HBox layoutY="114.0" prefHeight="376.0" prefWidth="506.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="344.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <VBox prefHeight="364.0" prefWidth="508.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="406.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Qidiruv: " textAlignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextField fx:id="tft_search" prefHeight="25.0" prefWidth="102.0" promptText="////........." HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <ComboBox fx:id="combo_tur" onAction="#handle_combo_tur" prefHeight="39.0" prefWidth="305.0" promptText="Tanlang!">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <TextField fx:id="tft_summa" editable="false" prefHeight="39.0" prefWidth="252.0" promptText=" 0.0 UZS">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView fx:id="table_prixod" prefHeight="275.0" prefWidth="406.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="col_id" prefWidth="67.0" sortable="false" style="-fx-font-size: 16px;" text="№" />
+                        <TableColumn fx:id="col_nomi" prefWidth="96.0" style="-fx-font-size: 16px;" text="NOMI" />
+                        <TableColumn fx:id="col_tur" minWidth="6.0" prefWidth="6.0" style="-fx-font-size: 16px;" text="TURI" />
+                        <TableColumn fx:id="col_soni" prefWidth="75.0" style="-fx-font-size: 16px;" text="SONI" />
+                        <TableColumn fx:id="col_kelish" prefWidth="95.0" style="-fx-font-size: 16px;" text="KELISH" />
+                        <TableColumn fx:id="col_sotish" prefWidth="75.0" style="-fx-font-size: 16px;" text="SOTISH" />
+                        <TableColumn fx:id="col_summa" prefWidth="75.0" style="-fx-font-size: 16px;" text="SUMMA" />
+                        <TableColumn fx:id="col_sana" prefWidth="75.0" style="-fx-font-size: 16px;" text="SANA" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#handle_delete" text="Delete" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" spacing="50.0">
+                     <children>
+                        <JFXButton onAction="#handle_export" prefHeight="37.0" prefWidth="200.0" style="-fx-background-color: #293a4c; -fx-border-color: white; -fx-border-width: 3; -fx-border-radius: 5;" text="Excelda saqlash" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="29.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/excel%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#handle_Plist" prefHeight="37.0" prefWidth="200.0" style="-fx-background-color: #293a4c;" text="Prixodlar ro'yxati" textFill="#fff9f9">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="LIST" size="18" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="260.0" layoutY="13.0" onAction="#handle_PRINT" prefHeight="38.0" prefWidth="138.0" style="-fx-background-color: #293a4c;" text="Print" textFill="#fff9f9">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="26.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/barcode.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="499.0" layoutY="114.0" prefHeight="318.0" prefWidth="351.0" style="-fx-background-color:#e6e6e6;" AnchorPane.bottomAnchor="58.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="114.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="351.0">
+               <children>
+                  <Label fx:id="lbl_soat" text="21:16:11">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <DatePicker fx:id="data_sana" prefHeight="41.0" prefWidth="218.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <JFXComboBox fx:id="combo_nomi" editable="true" prefHeight="37.0" prefWidth="234.0" visibleRowCount="5">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></JFXComboBox>
+                  <TextField fx:id="edt_nomi_id" onAction="#handle_id" prefHeight="38.0" prefWidth="115.0" promptText="ID">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="20.0">
+               <children>
+                  <Label text="Shtrix kod:" />
+                  <TextField fx:id="tft_shtrix" prefHeight="39.0" prefWidth="195.0" promptText="0000000">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <TextField fx:id="tft_soni" prefHeight="43.0" prefWidth="220.0" promptText="SONI">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <TextField fx:id="tft_kelish" prefHeight="37.0" prefWidth="214.0" promptText="KIRIM NARXI" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <TextField fx:id="tft_sotish" prefHeight="39.0" prefWidth="213.0" promptText="SOTISH NARXI" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="351.0">
+               <children>
+                  <JFXButton onAction="#handle_prixod" prefHeight="45.0" prefWidth="283.0" style="-fx-background-color: #3f48cc; -fx-background-radius: 10;" text="PRIXOD" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="50.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" />
+         </children>
+      </VBox>
+      <JFXButton cancelButton="true" layoutX="675.0" layoutY="439.0" onAction="#handle_back" prefHeight="37.0" prefWidth="124.0" style="-fx-background-color: #293a4c;" text="Orqaga" textFill="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="51.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="FORWARD" rotate="180.0" size="15" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
